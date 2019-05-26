@@ -1,0 +1,36 @@
+-var list = ['1', '2', '3', '4']
+html
+    head
+        title MyApp
+        //- bower:css
+        link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+        //- endbower
+        //- bower:js
+        script(src='/lib/jquery/dist/jquery.js')
+        script(src='/lib/bootstrap/dist/js/bootstrap.js')
+        //- endbower
+        //- inject:css
+        
+        link(rel="stylesheet", href="/css/styles.css")
+        
+        //- endinject
+        //- inject:js
+        
+        script(src="/js/app.js")
+        
+        script(src="/js/scripts.js")
+        
+        //- endinject
+    body(class='MyClass')
+        h1(id='masthead') My App
+        p
+            h3 sub heading
+        h2 List 1
+        ul
+            each val in list
+                li= val
+        h2 List of Fruits
+        ul
+            each val in fuits
+                li= val.toUpperCase()
